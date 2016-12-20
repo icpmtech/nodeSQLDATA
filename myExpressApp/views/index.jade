@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+ div
+  table
+    thead
+      tr: th Customers
+    tbody
+      each post, i in customers
+        tr
+          td 
+            a(href='/admin/post/' + post.id) #{post.author} - #{post.title}
